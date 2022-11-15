@@ -1,0 +1,17 @@
+name: 'Test!'
+description: 'For testing purpose'
+inputs:
+  a-test-input:
+    description: 'Just a test input'
+    required: true
+outputs:
+  blah:
+    description: 'not used'
+    value: ${{ steps.blah.outputs.blah }}
+runs:
+  using: "composite"
+  steps:
+    - run: echo Sup yo, your input is ${{ inputs.a-test-input}}
+      shell: bash
+    - run: echo "blah=$(echo $RANDOM)" >> $GITHUB_OUTPUT
+      shell: bash
