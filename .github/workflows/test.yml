@@ -13,3 +13,5 @@ jobs:
                 a-test-input: "Yep input is working!"
             - run: echo Your blah random num is ${{ steps.foo.outputs.blah}}
               shell: bash
+            - run: python3 code.py
+              shell: bash
