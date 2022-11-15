@@ -1,3 +1,4 @@
+name: A test workflow for testing?
 on: [push, workflow_dispatch]
 
 jobs:
@@ -10,5 +11,5 @@ jobs:
               uses: breaktoprotect/test-github-action@v1
               with:
                 a-test-input: "Yep input is working!"
-            - run: ls -alh
+            - run: echo Your blah random num is -> ${{ steps.foo.outputs.blah}}
               shell: bash
