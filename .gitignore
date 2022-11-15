@@ -1,1 +1,15 @@
 .vscode
+on: [push, workflow_dispatch]
+
+jobs:
+    test-job:
+        runs-on: ubuntu-latest
+        name: A test job
+        steps:
+            - uses: actions/checkout@v3
+            - id: foo
+              uses: breaktoprotect/test-github-action@v1
+              with:
+                a-test-input: "Yep, test input's working!"
+            - run: ls -alh
+              shell: bash
