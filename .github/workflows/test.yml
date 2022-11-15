@@ -11,5 +11,5 @@ jobs:
               uses: breaktoprotect/test-github-action@v1
               with:
                 a-test-input: "Yep input is working!"
-            - run: echo Your blah random num is -> ${{ steps.foo.outputs.blah}}
+            - run: echo Your blah random num is ${{ steps.foo.outputs.blah}}
               shell: bash
