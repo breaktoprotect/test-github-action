@@ -9,6 +9,6 @@ jobs:
             - id: foo
               uses: breaktoprotect/test-github-action@v1
               with:
-                a-test-input: "Yep, test input's working!"
+                a-test-input: "Yep input is working!"
             - run: ls -alh
               shell: bash
