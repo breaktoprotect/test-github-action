@@ -13,5 +13,5 @@ runs:
   steps:
     - run: echo Sup yo, your input is ${{ inputs.a-test-input}}
       shell: bash
-    - run: echo "blah=$(echo $RANDOM)" >> $GITHUB_OUTPUT
+    - run: echo "blah=$(echo $blah)" >> $GITHUB_OUTPUT
       shell: bash
